@@ -3,8 +3,9 @@ import { AuthWidget } from "./AuthWidget";
 import { HomePage } from "./HomePage";
 import { SeriesPage } from "./SeriesPage";
 import { useAuth } from "./useAuth";
-import { useProgress } from "./useProgress";
+import { useProgress, activeStreakDays } from "./useProgress";
 import { navigateTo, useHashRoute } from "./useHashRoute";
+import { FlameIcon } from "./icons";
 import type { Manifest } from "./types";
 
 function dataUrl(path: string): string {
@@ -42,6 +43,16 @@ export const App: React.FC = () => {
           Tini Tiny Stories
         </button>
         <div className="topbar-spacer" />
+        {user && activeStreakDays(streak) > 0 && (
+          <div
+            className="topbar-streak"
+            title={`${activeStreakDays(streak)} day reading streak`}
+          >
+            <FlameIcon />
+            <strong>{activeStreakDays(streak)}</strong>
+            <span className="topbar-streak-label">day streak</span>
+          </div>
+        )}
         <AuthWidget
           user={user}
           loading={authLoading}

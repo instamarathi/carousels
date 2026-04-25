@@ -13,6 +13,18 @@ export const LockIcon: React.FC = () => (
   </svg>
 );
 
+export const FlameIcon: React.FC = () => (
+  <svg
+    width="12"
+    height="12"
+    viewBox="0 0 24 24"
+    fill="currentColor"
+    aria-hidden="true"
+  >
+    <path d="M13.5 0.67s.74 2.65.74 4.8c0 2.06-1.35 3.73-3.41 3.73-2.07 0-3.63-1.67-3.63-3.73l.03-.36C5.21 7.51 4 10.62 4 14a8 8 0 0 0 16 0c0-4.16-2-7.88-6.5-13.33zM11.71 19a3.04 3.04 0 0 1-3.04-2.99c0-1.6 1.04-2.73 2.74-3.07 1.7-.34 3.46-1.16 4.45-2.48.38 1.25.58 2.57.58 3.91 0 2.59-2.13 4.63-4.73 4.63z"/>
+  </svg>
+);
+
 export const ShareIcon: React.FC = () => (
   <svg
     width="13"

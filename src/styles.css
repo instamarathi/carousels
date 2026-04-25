@@ -47,6 +47,29 @@ button { font: inherit; cursor: pointer; }
 .topbar-home:hover { opacity: 0.8; }
 .topbar-spacer { flex: 1; }
 
+.topbar-streak {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border: 1px solid rgba(255, 153, 71, 0.35);
+  background: linear-gradient(135deg, rgba(255, 153, 71, 0.10), rgba(255, 89, 47, 0.05));
+  color: #f3b285;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  flex-shrink: 0;
+}
+.topbar-streak strong {
+  color: #ffb37a;
+  font-weight: 800;
+  font-family: 'Playfair Display', serif;
+  font-size: 14px;
+  line-height: 1;
+}
+.topbar-streak svg { color: #ffb37a; flex-shrink: 0; }
+
 .page { flex: 1; }
 
 .empty-state {
@@ -882,8 +905,10 @@ button { font: inherit; cursor: pointer; }
 /* ============ MOBILE ============ */
 
 @media (max-width: 768px) {
-  .topbar { padding: 0 16px; height: 52px; }
+  .topbar { padding: 0 12px; height: 52px; gap: 8px; }
   .topbar-home { font-size: 15px; }
+  .topbar-streak { padding: 4px 9px; font-size: 11px; }
+  .topbar-streak-label { display: none; }
 
   .home-page { padding: 28px 18px 60px; }
   .home-title { font-size: 32px; }
