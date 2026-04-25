@@ -6,6 +6,7 @@ body {
   background: #0a0a0a;
   color: #e6e6e6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 button { font: inherit; cursor: pointer; }
@@ -449,6 +450,36 @@ button { font: inherit; cursor: pointer; }
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+/* Mobile-only episodes dropdown (hidden on desktop). */
+.episodes-dropdown { display: none; }
+.episodes-dropdown .rail-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #666;
+  margin-bottom: 8px;
+}
+.episodes-dropdown select {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 100%;
+  background: #111
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='%23999' d='M6 8L0 0h12z'/></svg>")
+    no-repeat right 14px center;
+  color: #f0f0f0;
+  border: 1px solid #222;
+  border-radius: 8px;
+  padding: 10px 36px 10px 14px;
+  font: inherit;
+  font-size: 14px;
+}
+.episodes-dropdown select:focus {
+  outline: none;
+  border-color: #555;
 }
 
 /* ============ EPISODE STAGE ============ */
@@ -926,43 +957,19 @@ button { font: inherit; cursor: pointer; }
     padding: 16px 18px 60px;
   }
 
-  /* On mobile, the episodes rail becomes a horizontal chip strip
-     so the carousel takes the full screen below it. */
-  .episodes-rail {
-    position: static;
-    max-height: none;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #1a1a1a;
-    border-radius: 0;
-    padding: 0 0 12px;
-  }
-  .rail-label { padding: 0 0 8px; }
-  .rail-list {
-    display: flex;
-    gap: 6px;
-    overflow-x: auto;
-    scroll-snap-type: x proximity;
-    -webkit-overflow-scrolling: touch;
-    flex: none;
-  }
-  .rail-list::-webkit-scrollbar { display: none; }
-  .rail-item {
-    flex: 0 0 auto;
-    border-left: none;
-    border-bottom: 2px solid transparent;
-    border-radius: 999px;
-    background: #131313;
-    padding: 7px 14px;
-    scroll-snap-align: start;
-    max-width: 240px;
-  }
-  .rail-item.active {
-    border-bottom-color: transparent;
-    background: rgba(255,255,255,0.06);
-  }
+  /* Hide the desktop chip-strip rail; mobile uses the dropdown instead. */
+  .episodes-rail { display: none; }
+  .episodes-dropdown { display: block; margin-bottom: 4px; }
   .ep-headline { font-size: 22px; }
 
-  .carousel { max-width: none; }
+  /* Full-bleed carousel: break out of series-body padding so the slide
+     spans the actual viewport width (Instagram-style). Surrounding chrome
+     (ep-meta, caption) keeps its padding. */
+  .carousel-wrap {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+  .carousel { max-width: 100vw; }
+  .carousel-track { border-radius: 0; }
   .ep-caption { margin: 20px 4px 0; }
 }

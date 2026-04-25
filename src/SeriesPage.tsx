@@ -173,6 +173,24 @@ const SeriesContent: React.FC<{
           </div>
         </aside>
 
+        <div className="episodes-dropdown">
+          <label className="rail-label" htmlFor="ep-select">
+            Episodes · {data.episodes.length}
+          </label>
+          <select
+            id="ep-select"
+            value={episode.episode_number}
+            onChange={(e) => onSelectEpisode(Number(e.target.value))}
+            style={{ borderColor: `${series.colors.accent}55` }}
+          >
+            {data.episodes.map((e) => (
+              <option key={e.episode_number} value={e.episode_number}>
+                E{String(e.episode_number).padStart(2, "0")} · {e.title}
+              </option>
+            ))}
+          </select>
+        </div>
+
         <main className="episode-stage">
           <div className="ep-meta">
             <div className="ep-meta-top">
