@@ -19,7 +19,7 @@ export const SeriesPage: React.FC<{
   signIn: () => void;
   progress: ProgressMap;
   progressLoaded: boolean;
-  recordProgress: (slug: string, ep: number, slide: number) => void;
+  recordProgress: (slug: string, ep: number, slide: number, slidesInEpisode: number) => void;
 }> = ({ slug, manifest, user, authLoading, signIn, progress, progressLoaded, recordProgress }) => {
   const found = useMemo(() => {
     if (!manifest) return null;
@@ -93,7 +93,9 @@ export const SeriesPage: React.FC<{
         setActiveEpisode(n);
         setInitialSlide(0);
       }}
-      onSlideRead={(ep, slide) => recordProgress(found.series.slug, ep, slide)}
+      onSlideRead={(ep, slide, slidesInEpisode) =>
+        recordProgress(found.series.slug, ep, slide, slidesInEpisode)
+      }
     />
   );
 };
@@ -105,7 +107,7 @@ const SeriesContent: React.FC<{
   activeEpisode: number;
   initialSlide: number;
   onSelectEpisode: (n: number) => void;
-  onSlideRead: (episode: number, slide: number) => void;
+  onSlideRead: (episode: number, slide: number, slidesInEpisode: number) => void;
 }> = ({ category, series, data, activeEpisode, initialSlide, onSelectEpisode, onSlideRead }) => {
   const episode = useMemo(
     () => data.episodes.find((e) => e.episode_number === activeEpisode) ?? data.episodes[0],
@@ -172,7 +174,7 @@ const SeriesContent: React.FC<{
               accent={series.colors.accent}
               resetKey={`${series.slug}-${episode.episode_number}`}
               initialSlide={initialSlide}
-              onSlideChange={(i) => onSlideRead(episode.episode_number, i)}
+              onSlideChange={(i) => onSlideRead(episode.episode_number, i, episode.slides.length)}
             >
               {episode.slides.map((slide) => (
                 <div key={slide.slide_number} className="slide-frame">

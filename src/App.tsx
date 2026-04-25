@@ -14,7 +14,13 @@ function dataUrl(path: string): string {
 export const App: React.FC = () => {
   const route = useHashRoute();
   const { user, loading: authLoading, signIn, signOut } = useAuth();
-  const { progress, loaded: progressLoaded, recordProgress } = useProgress(user);
+  const {
+    progress,
+    completedEpisodes,
+    streak,
+    loaded: progressLoaded,
+    recordProgress,
+  } = useProgress(user);
 
   const [manifest, setManifest] = useState<Manifest | null>(null);
 
@@ -47,7 +53,12 @@ export const App: React.FC = () => {
 
       <main className="page">
         {route.kind === "home" && (
-          <HomePage manifest={manifest} signedIn={!!user} />
+          <HomePage
+            manifest={manifest}
+            signedIn={!!user}
+            completedEpisodes={completedEpisodes}
+            streak={streak}
+          />
         )}
         {route.kind === "series" && (
           <SeriesPage

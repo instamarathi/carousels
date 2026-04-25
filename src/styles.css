@@ -93,9 +93,37 @@ button { font: inherit; cursor: pointer; }
   align-items: center;
   justify-content: center;
   gap: 8px;
+  flex-wrap: wrap;
 }
 .home-stats strong { color: #ddd; font-weight: 700; }
 .home-stats .dot { color: #444; }
+
+.home-stats.personal { gap: 10px; }
+.home-stats.personal .stat-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  border: 1px solid #1f1f1f;
+  border-radius: 999px;
+  background: #111;
+  color: #aaa;
+  font-size: 12px;
+  letter-spacing: 0.3px;
+}
+.home-stats.personal .stat-pill strong {
+  font-family: 'Playfair Display', serif;
+  font-size: 16px;
+  color: #f0f0f0;
+  font-weight: 800;
+  line-height: 1;
+}
+.home-stats.personal .stat-pill.streak {
+  border-color: rgba(255, 153, 71, 0.35);
+  background: linear-gradient(135deg, rgba(255, 153, 71, 0.10), rgba(255, 89, 47, 0.05));
+  color: #f3b285;
+}
+.home-stats.personal .stat-pill.streak strong { color: #ffb37a; }
 
 .home-channel {
   margin-bottom: 48px;

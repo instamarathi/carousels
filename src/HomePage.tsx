@@ -2,13 +2,17 @@ import React, { useState } from "react";
 import { navigateTo } from "./useHashRoute";
 import { LockIcon } from "./icons";
 import type { Manifest } from "./types";
+import { activeStreakDays } from "./useProgress";
+import type { CompletedEpisodesMap, Streak } from "./useProgress";
 
 const VISIBLE_PER_CATEGORY = 5;
 
 export const HomePage: React.FC<{
   manifest: Manifest | null;
   signedIn: boolean;
-}> = ({ manifest, signedIn }) => {
+  completedEpisodes: CompletedEpisodesMap;
+  streak: Streak;
+}> = ({ manifest, signedIn, completedEpisodes, streak }) => {
   const [expanded, setExpanded] = useState<Set<string>>(new Set());
 
   if (!manifest) return <div className="empty-state">Loading manifest…</div>;
@@ -19,6 +23,19 @@ export const HomePage: React.FC<{
     0,
   );
 
+  let episodesRead = 0;
+  let seriesCompleted = 0;
+  for (const category of manifest.categories) {
+    for (const s of category.series) {
+      const completed = completedEpisodes[s.slug] ?? [];
+      episodesRead += completed.length;
+      if (completed.length >= s.episode_count && s.episode_count > 0) {
+        seriesCompleted += 1;
+      }
+    }
+  }
+  const streakDays = activeStreakDays(streak);
+
   return (
     <div className="home-page">
       <section className="home-hero">
@@ -27,11 +44,25 @@ export const HomePage: React.FC<{
           Bite-sized carousels across history, business, careers, and the unwritten rules.
           Read the free preview — sign in to unlock the full catalog and resume where you left off.
         </p>
-        <div className="home-stats">
-          <span><strong>{totalSeries}</strong> series</span>
-          <span className="dot">·</span>
-          <span><strong>{totalEpisodes}</strong> episodes</span>
-        </div>
+        {signedIn ? (
+          <div className="home-stats personal">
+            <span className="stat-pill streak">
+              <strong>{streakDays}</strong> day streak
+            </span>
+            <span className="stat-pill">
+              <strong>{episodesRead}</strong> episode{episodesRead === 1 ? "" : "s"} read
+            </span>
+            <span className="stat-pill">
+              <strong>{seriesCompleted}</strong> / {totalSeries} series done
+            </span>
+          </div>
+        ) : (
+          <div className="home-stats">
+            <span><strong>{totalSeries}</strong> series</span>
+            <span className="dot">·</span>
+            <span><strong>{totalEpisodes}</strong> episodes</span>
+          </div>
+        )}
       </section>
 
       {manifest.categories.map((category) => {
