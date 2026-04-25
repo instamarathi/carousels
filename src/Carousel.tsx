@@ -88,29 +88,32 @@ export const Carousel: React.FC<CarouselProps> = ({
         {children}
       </div>
 
-      <button
-        className="carousel-btn carousel-btn-prev"
-        onClick={() => goTo(current - 1)}
-        disabled={current === 0}
-        aria-label="Previous slide"
-      >‹</button>
-      <button
-        className="carousel-btn carousel-btn-next"
-        onClick={() => goTo(current + 1)}
-        disabled={current >= slideCount - 1}
-        aria-label="Next slide"
-      >›</button>
+      <div className="carousel-controls">
+        <button
+          className="carousel-btn"
+          onClick={() => goTo(current - 1)}
+          disabled={current === 0}
+          aria-label="Previous slide"
+        >‹</button>
 
-      <div className="carousel-dots">
-        {Array.from({ length: slideCount }).map((_, i) => (
-          <button
-            key={i}
-            className={"dot" + (i === current ? " active" : "")}
-            onClick={() => goTo(i)}
-            aria-label={`Go to slide ${i + 1}`}
-            style={i === current ? { background: accent } : undefined}
-          />
-        ))}
+        <div className="carousel-dots">
+          {Array.from({ length: slideCount }).map((_, i) => (
+            <button
+              key={i}
+              className={"dot" + (i === current ? " active" : "")}
+              onClick={() => goTo(i)}
+              aria-label={`Go to slide ${i + 1}`}
+              style={i === current ? { background: accent } : undefined}
+            />
+          ))}
+        </div>
+
+        <button
+          className="carousel-btn"
+          onClick={() => goTo(current + 1)}
+          disabled={current >= slideCount - 1}
+          aria-label="Next slide"
+        >›</button>
       </div>
     </div>
   );

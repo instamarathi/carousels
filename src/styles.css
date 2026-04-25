@@ -402,35 +402,40 @@ button { font: inherit; cursor: pointer; }
   padding: 0;
 }
 
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 16px;
+  flex-wrap: nowrap;
+}
 .carousel-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 40px; height: 40px;
+  flex: 0 0 auto;
+  width: 36px; height: 36px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.55);
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.18);
+  background: #1a1a1a;
+  color: #ddd;
+  border: 1px solid #2a2a2a;
   font-size: 22px;
   line-height: 1;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  transition: background 0.15s, opacity 0.15s;
+  transition: background 0.15s, opacity 0.15s, transform 0.12s;
 }
-.carousel-btn:hover:not(:disabled) { background: rgba(0,0,0,0.8); }
-.carousel-btn:disabled { opacity: 0.25; cursor: default; }
-.carousel-btn-prev { left: 8px; }
-.carousel-btn-next { right: 8px; }
+.carousel-btn:hover:not(:disabled) {
+  background: #232323;
+  transform: scale(1.05);
+}
+.carousel-btn:disabled { opacity: 0.3; cursor: default; }
 
 .carousel-dots {
   display: flex;
   gap: 6px;
   justify-content: center;
-  margin-top: 16px;
   flex-wrap: wrap;
+  flex: 0 1 auto;
 }
 .dot {
   width: 8px; height: 8px;
@@ -816,6 +821,5 @@ button { font: inherit; cursor: pointer; }
   .ep-headline { font-size: 22px; }
 
   .carousel { max-width: none; }
-  .carousel-btn { display: none; }
   .ep-caption { margin: 20px 4px 0; }
 }
