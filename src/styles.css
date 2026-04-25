@@ -383,8 +383,11 @@ button { font: inherit; cursor: pointer; }
   border-radius: 14px;
   background: #000;
   box-shadow: 0 24px 60px rgba(0,0,0,0.6);
+  /* contain stops iOS swipe-back from hijacking the carousel,
+     and the default touch-action lets the browser route
+     horizontal swipes to the track and vertical swipes to the page. */
   overscroll-behavior-x: contain;
-  touch-action: pan-y pinch-zoom;
+  -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
 .carousel-track::-webkit-scrollbar { display: none; }
