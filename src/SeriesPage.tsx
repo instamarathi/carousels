@@ -2,8 +2,8 @@ import React, { useEffect, useMemo, useState } from "react";
 import type { User } from "firebase/auth";
 import { Carousel } from "./Carousel";
 import { Slide } from "./Slide";
-import { LockIcon, GoogleIcon } from "./icons";
-import { navigateTo } from "./useHashRoute";
+import { LockIcon, GoogleIcon, ShareIcon } from "./icons";
+import { navigateTo, replaceRoute } from "./useHashRoute";
 import type { Category, Manifest, SeriesData, SeriesEntry } from "./types";
 import type { ProgressMap } from "./useProgress";
 
@@ -13,6 +13,7 @@ function dataUrl(path: string): string {
 
 export const SeriesPage: React.FC<{
   slug: string;
+  routeEpisode: number | undefined;
   manifest: Manifest | null;
   user: User | null;
   authLoading: boolean;
@@ -20,7 +21,7 @@ export const SeriesPage: React.FC<{
   progress: ProgressMap;
   progressLoaded: boolean;
   recordProgress: (slug: string, ep: number, slide: number, slidesInEpisode: number) => void;
-}> = ({ slug, manifest, user, authLoading, signIn, progress, progressLoaded, recordProgress }) => {
+}> = ({ slug, routeEpisode, manifest, user, authLoading, signIn, progress, progressLoaded, recordProgress }) => {
   const found = useMemo(() => {
     if (!manifest) return null;
     for (const category of manifest.categories) {
@@ -49,9 +50,15 @@ export const SeriesPage: React.FC<{
   }, [found]);
 
   // Once both series JSON and progress are loaded, pick a starting episode.
+  // URL episode wins over saved progress (so shared links land on the right ep).
   useEffect(() => {
     if (!found || !seriesData || !progressLoaded) return;
     if (activeEpisode !== null) return;
+    if (routeEpisode !== undefined && seriesData.episodes.some((e) => e.episode_number === routeEpisode)) {
+      setActiveEpisode(routeEpisode);
+      setInitialSlide(0);
+      return;
+    }
     const saved = progress[found.series.slug];
     if (saved && seriesData.episodes.some((e) => e.episode_number === saved.episode)) {
       setActiveEpisode(saved.episode);
@@ -60,7 +67,14 @@ export const SeriesPage: React.FC<{
     }
     setActiveEpisode(seriesData.episodes[0]?.episode_number ?? null);
     setInitialSlide(0);
-  }, [found, seriesData, progressLoaded, progress, activeEpisode]);
+  }, [found, seriesData, progressLoaded, progress, activeEpisode, routeEpisode]);
+
+  // Keep the URL in sync with the active episode (replace, not push, so the
+  // back button takes you home rather than walking through every episode).
+  useEffect(() => {
+    if (!found || activeEpisode === null) return;
+    replaceRoute({ kind: "series", slug: found.series.slug, episode: activeEpisode });
+  }, [found, activeEpisode]);
 
   if (!manifest) return <div className="empty-state">Loading manifest…</div>;
   if (!found) {
@@ -161,8 +175,15 @@ const SeriesContent: React.FC<{
 
         <main className="episode-stage">
           <div className="ep-meta">
-            <div className="ep-tag" style={{ color: series.colors.accent }}>
-              EPISODE {episode.episode_number}
+            <div className="ep-meta-top">
+              <div className="ep-tag" style={{ color: series.colors.accent }}>
+                EPISODE {episode.episode_number}
+              </div>
+              <ShareButton
+                series={series}
+                episodeTitle={episode.title}
+                episodeSynopsis={episode.synopsis}
+              />
             </div>
             <h3 className="ep-headline">{episode.title}</h3>
             {episode.synopsis && <p className="ep-synopsis">{episode.synopsis}</p>}
@@ -221,6 +242,48 @@ const SeriesContent: React.FC<{
         </main>
       </div>
     </div>
+  );
+};
+
+const ShareButton: React.FC<{
+  series: SeriesEntry;
+  episodeTitle: string;
+  episodeSynopsis?: string;
+}> = ({ series, episodeTitle, episodeSynopsis }) => {
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const t = window.setTimeout(() => setCopied(false), 1600);
+    return () => window.clearTimeout(t);
+  }, [copied]);
+
+  const handleClick = async () => {
+    const url = window.location.href;
+    const desc = episodeSynopsis || series.tagline;
+    const lines = [`${episodeTitle} · ${series.name}`];
+    if (desc) lines.push(desc);
+    lines.push("", url);
+    const text = lines.join("\n");
+
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch (e) {
+      console.error("clipboard write failed", e);
+    }
+    setCopied(true);
+  };
+
+  return (
+    <button
+      className={"share-btn" + (copied ? " copied" : "")}
+      onClick={handleClick}
+      aria-label={copied ? "Link copied" : "Share this episode"}
+      style={{ color: series.colors.accent, borderColor: `${series.colors.accent}55` }}
+    >
+      <ShareIcon />
+      <span>{copied ? "Copied!" : "Share"}</span>
+    </button>
   );
 };
 

@@ -432,13 +432,38 @@ button { font: inherit; cursor: pointer; }
 
 .episode-stage { min-width: 0; }
 .ep-meta { margin-bottom: 22px; }
+.ep-meta-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
 .ep-tag {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2.5px;
-  margin-bottom: 6px;
   text-transform: uppercase;
 }
+
+.share-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  background: transparent;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  opacity: 0.85;
+  transition: opacity 0.15s, transform 0.12s, background 0.15s;
+}
+.share-btn:hover { opacity: 1; transform: translateY(-1px); background: rgba(255,255,255,0.04); }
+.share-btn.copied { opacity: 1; }
+.share-btn svg { flex-shrink: 0; }
 .ep-headline {
   font-family: 'Playfair Display', serif;
   font-size: 26px;

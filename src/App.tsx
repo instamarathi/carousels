@@ -63,6 +63,7 @@ export const App: React.FC = () => {
         {route.kind === "series" && (
           <SeriesPage
             slug={route.slug}
+            routeEpisode={route.episode}
             manifest={manifest}
             user={user}
             authLoading={authLoading}

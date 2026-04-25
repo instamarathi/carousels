@@ -2,11 +2,15 @@ import { useEffect, useState } from "react";
 
 export type Route =
   | { kind: "home" }
-  | { kind: "series"; slug: string };
+  | { kind: "series"; slug: string; episode?: number };
 
 function parseHash(hash: string): Route {
-  const m = hash.match(/^#\/series\/(.+)$/);
-  if (m) return { kind: "series", slug: decodeURIComponent(m[1]) };
+  const m = hash.match(/^#\/series\/([^/]+)(?:\/e\/(\d+))?$/);
+  if (m) {
+    const slug = decodeURIComponent(m[1]);
+    const episode = m[2] ? Number(m[2]) : undefined;
+    return { kind: "series", slug, episode };
+  }
   return { kind: "home" };
 }
 
@@ -20,14 +24,26 @@ export function useHashRoute(): Route {
   return route;
 }
 
-export function navigateTo(route: Route) {
+function buildHash(route: Route): string {
+  if (route.kind === "home") return "";
+  let h = `#/series/${encodeURIComponent(route.slug)}`;
+  if (route.episode !== undefined) h += `/e/${route.episode}`;
+  return h;
+}
+
+export function navigateTo(route: Route, opts: { scroll?: boolean } = {}) {
+  const { scroll = true } = opts;
+  const target = buildHash(route);
   if (route.kind === "home") {
-    if (window.location.hash) {
-      window.location.hash = "";
-    }
-  } else if (route.kind === "series") {
-    window.location.hash = `#/series/${encodeURIComponent(route.slug)}`;
+    if (window.location.hash) window.location.hash = "";
+  } else if (target !== window.location.hash) {
+    window.location.hash = target;
   }
-  // Always scroll to top on route change.
-  window.scrollTo(0, 0);
+  if (scroll) window.scrollTo(0, 0);
+}
+
+export function replaceRoute(route: Route) {
+  const target = buildHash(route);
+  const url = window.location.pathname + window.location.search + (target || "");
+  window.history.replaceState(null, "", url);
 }
