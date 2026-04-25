@@ -1,0 +1,15 @@
+rules_version = '2';
+
+// Source of truth for the rules deployed to Firebase. Keep this file in
+// sync with the Firestore Rules tab in the Firebase console.
+//
+// Each user can only read/write their own user doc. Reading progress is
+// stored at users/{uid}.progress (a map keyed by series slug).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /users/{uid} {
+      allow read, write: if request.auth != null && request.auth.uid == uid;
+    }
+  }
+}

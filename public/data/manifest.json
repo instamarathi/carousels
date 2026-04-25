@@ -1,0 +1,73 @@
+{
+  "channels": [
+    {
+      "name": "Tini Tiny Series",
+      "slug": "tini_tiny_series",
+      "default_handle": "@tini_tiny_series",
+      "series": [
+        {
+          "slug": "the_dropout",
+          "name": "The Dropout",
+          "tagline": "Before the empire, there was the struggle.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 30,
+          "requires_auth": false,
+          "colors": {
+            "bg_dark": "#1a100a",
+            "bg_mid": "#281c0f",
+            "text": "#f0e4d0",
+            "accent": "#ff8f00",
+            "accent_dim": "#8a6840"
+          },
+          "json": "data/tini_tiny_series/the_dropout.json"
+        }
+      ]
+    },
+    {
+      "name": "One Level Deeper",
+      "slug": "one_level_deeper",
+      "default_handle": "@go.one.level.deeper",
+      "series": [
+        {
+          "slug": "the_grove_method",
+          "name": "The Grove Method",
+          "tagline": "What they don't teach you when they promote you.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 30,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a1a2e",
+            "bg_mid": "#2a2a3e",
+            "text": "#e0e0e0",
+            "accent": "#f0a500",
+            "accent_dim": "#8a7a4a"
+          },
+          "json": "data/one_level_deeper/the_grove_method.json"
+        }
+      ]
+    },
+    {
+      "name": "The Unwritten Rules",
+      "slug": "the_unwritten_rules",
+      "default_handle": "@the.unwritten.rules",
+      "series": [
+        {
+          "slug": "tamasha",
+          "name": "Tamasha",
+          "tagline": "भीड़ जुटाने का बहाना हमेशा मिल जाता है",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0510",
+            "bg_mid": "#40081e",
+            "text": "#f5e6c8",
+            "accent": "#e8332e",
+            "accent_dim": "#d4a855"
+          },
+          "json": "data/the_unwritten_rules/tamasha.json"
+        }
+      ]
+    }
+  ]
+}
