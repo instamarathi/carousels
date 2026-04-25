@@ -10,6 +10,7 @@ export type SeriesEntry = {
   slug: string;
   name: string;
   tagline: string;
+  concept: string;
   handle: string;
   episode_count: number;
   requires_auth: boolean;

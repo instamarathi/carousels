@@ -6,9 +6,333 @@
       "default_handle": "@tini_tiny_series",
       "series": [
         {
+          "slug": "100_crore_startup",
+          "name": "₹100 Crore Startup",
+          "tagline": "A startup that crashed. Told in reverse. Every episode goes back one step.",
+          "concept": "Episode 1 opens with the company dead. Each episode rewinds time, revealing what went wrong. The audience watches a success story unravel backwards — seeing the red flags the founder missed. Every episode ends with 'But 3 months earlier...' pulling viewers to the next episode.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a12",
+            "bg_mid": "#0f2820",
+            "text": "#d8f0e8",
+            "accent": "#26a69a",
+            "accent_dim": "#4a8a80"
+          },
+          "json": "data/tini_tiny_series/100_crore_startup.json"
+        },
+        {
+          "slug": "adaalat_2.0",
+          "name": "Adaalat 2.0",
+          "tagline": "Everyone knows who did it. Can you PROVE it?",
+          "concept": "Realistic criminal cases where everyone knows who's guilty — but proving it is the real challenge. Each episode is a carousel reel that walks the audience through a case, builds an evidence board, and challenges them to figure out what's missing before revealing the answer.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 23,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a0a0a",
+            "bg_mid": "#1a1215",
+            "text": "#e8e0d8",
+            "accent": "#cc3333",
+            "accent_dim": "#8a5a5a"
+          },
+          "json": "data/tini_tiny_series/adaalat_2.0.json"
+        },
+        {
+          "slug": "adapt_or_die",
+          "name": "Adapt or Die",
+          "tagline": "Technology has never been the villain. Resistance to technology has.",
+          "concept": "Each episode takes one historical innovation that people swore would destroy jobs -- and shows what actually happened. The pattern: the lazy/resistant got sidelined, the adapters thrived, and jobs usually GREW. Each episode draws a direct parallel to AI today.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 35,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a0f1a",
+            "bg_mid": "#101825",
+            "text": "#e0e8f0",
+            "accent": "#4a9eff",
+            "accent_dim": "#5a7a9a"
+          },
+          "json": "data/tini_tiny_series/adapt_or_die.json"
+        },
+        {
+          "slug": "bharat_ka_naksha",
+          "name": "Bharat ka Naksha",
+          "tagline": "This line on the map... cost thousands of lives.",
+          "concept": "Each episode covers one border, one treaty, or one decision that shaped India's map. From Partition to Aksai Chin, from the Durand Line to the McMahon Line. Dramatic narration, real consequences. Every border has a story. Most of them are tragedies.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a120a",
+            "bg_mid": "#281a0f",
+            "text": "#f0e4d0",
+            "accent": "#ff9800",
+            "accent_dim": "#8a7050"
+          },
+          "json": "data/tini_tiny_series/bharat_ka_naksha.json"
+        },
+        {
+          "slug": "chai_pe_charcha",
+          "name": "Chai pe Charcha",
+          "tagline": "Ek tapri. Hazaar kahaniyaan.",
+          "concept": "A tapri (roadside tea stall) where strangers come, sit, and share their stories with the chaiwala. Each episode is one person's story. But the chaiwala remembers everyone — and slowly, the audience realizes all these strangers are connected to each other in ways they don't know.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0f0a",
+            "bg_mid": "#2d1810",
+            "text": "#f5e6d3",
+            "accent": "#c8956c",
+            "accent_dim": "#8a6e5a"
+          },
+          "json": "data/tini_tiny_series/chai_pe_charcha.json"
+        },
+        {
+          "slug": "dadi_ke_nuskhe_vs_science",
+          "name": "Dadi ke Nuskhe vs Science",
+          "tagline": "Your dadi said it. Science tested it. Here's the verdict.",
+          "concept": "Each episode takes a traditional Indian home remedy and tests it against science. Haldi doodh, neem, tulsi water — does it actually work? Sometimes grandma was a genius. Sometimes she was just guessing. Either way, the truth is funnier than you think.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0f1a0a",
+            "bg_mid": "#1a280f",
+            "text": "#e0f0d8",
+            "accent": "#8bc34a",
+            "accent_dim": "#6a8a4a"
+          },
+          "json": "data/tini_tiny_series/dadi_ke_nuskhe_vs_science.json"
+        },
+        {
+          "slug": "greener_grass",
+          "name": "Greener Grass",
+          "tagline": "The grass is always greener on the other side. Until you hear the water bill.",
+          "concept": "Set in one neighborhood in an Indian city, Greener Grass follows ~15 interconnected characters — neighbors, colleagues, friends, family — each embodying a trait the world either envies or pities. Each episode peels back the surface to reveal the hidden cost of every envied life and the hidden gift in every pitied one. Over 30 episodes, the same events unfold from different perspectives, and the audience realizes: nobody has it figured out.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 30,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a0f",
+            "bg_mid": "#142818",
+            "text": "#d8f0dd",
+            "accent": "#4caf50",
+            "accent_dim": "#5a8a5e"
+          },
+          "json": "data/tini_tiny_series/greener_grass.json"
+        },
+        {
+          "slug": "gully_cricket_diaries",
+          "name": "Gully Cricket Diaries",
+          "tagline": "One gully. Six overs. Infinite drama.",
+          "concept": "A small Indian town where everything revolves around gully cricket. The local ground between two buildings is the battlefield. Characters include Pappu (self-proclaimed captain), Chhotu (twelve-year-old prodigy), Bunty (bookie who bets samosas), Pinky (the only girl who bowls faster than everyone), Guddu bhaiya (umpire nobody trusts), and Bablu (terrace ball retriever). Each episode is one over -- six balls, one drama. Stakes are ego, friendships, crushes, and who pays for chai. Every episode ends mid-conflict.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a0f",
+            "bg_mid": "#142818",
+            "text": "#d8f0dd",
+            "accent": "#4caf50",
+            "accent_dim": "#5a8a5e"
+          },
+          "json": "data/tini_tiny_series/gully_cricket_diaries.json"
+        },
+        {
+          "slug": "last_seen_online",
+          "name": "Last Seen Online",
+          "tagline": "Her last Instagram story was at 11:47 PM. She hasn't been seen since.",
+          "concept": "Someone disappears. The only clues are digital — WhatsApp last seen, Instagram stories, UPI transactions, Google Maps timeline. Each episode is a different disappearance. The audience pieces together what happened using the same apps they use every day.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a0f",
+            "bg_mid": "#102810",
+            "text": "#d8f0d8",
+            "accent": "#76ff03",
+            "accent_dim": "#5a8a50"
+          },
+          "json": "data/tini_tiny_series/last_seen_online.json"
+        },
+        {
+          "slug": "math_behind_everything",
+          "name": "Math Behind Everything",
+          "tagline": "The wild math hiding in your everyday life.",
+          "concept": "Every episode starts with a wild question and answers it with the hidden math behind everyday life. Grouped into arcs: Probability & Chance, Game Theory & Strategy, Cryptography & Security, and Everyday Physics. No formulas. No jargon. Just the 'oh THAT'S why' moment.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#120a1a",
+            "bg_mid": "#1a0f28",
+            "text": "#e8d8f0",
+            "accent": "#7c4dff",
+            "accent_dim": "#6a4a8a"
+          },
+          "json": "data/tini_tiny_series/math_behind_everything.json"
+        },
+        {
+          "slug": "meter_down",
+          "name": "Meter Down",
+          "tagline": "Aaj ek sawari mili...",
+          "concept": "A Pune auto driver comes home after work. Over dinner with his wife (a domestic worker) and their 13-year-old daughter, he tells the story of a passenger who stuck with him that day. Sometimes his wife pitches in with stories from the households she works in. Their daughter listens, asks questions, and — without anyone realizing — is slowly becoming the person all these stories are preparing her to be.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a100a",
+            "bg_mid": "#2c1810",
+            "text": "#f5e6d0",
+            "accent": "#e8985e",
+            "accent_dim": "#8b6914"
+          },
+          "json": "data/tini_tiny_series/meter_down.json"
+        },
+        {
+          "slug": "paise_ki_baat",
+          "name": "Paise Ki Baat",
+          "tagline": "Real money. Real stories. Real consequences.",
+          "concept": "Real money stories told as drama. Not financial advice — just stories that teach through emotion. SIPs, PPF, LIC, EMIs, gold, real estate — every episode is a true-feeling financial story from everyday Indian life told like a friend sharing a lesson over chai.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a10",
+            "bg_mid": "#0f2818",
+            "text": "#d8f0e0",
+            "accent": "#00c853",
+            "accent_dim": "#4a8a5a"
+          },
+          "json": "data/tini_tiny_series/paise_ki_baat.json"
+        },
+        {
+          "slug": "room_307",
+          "name": "Room 307",
+          "tagline": "Every guest leaves something behind. Every secret has a witness.",
+          "concept": "A hotel room where every guest who checks in discovers something the previous guest left behind -- a note, a photo, a recording. Each episode follows one guest's story, but they're all connected to one central mystery: what happened in Room 307 on the night of March 14th? A slow-burn revelation thriller where each cliffhanger reframes everything you thought you knew.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0f0a1a",
+            "bg_mid": "#1a1028",
+            "text": "#e0d8f0",
+            "accent": "#9b59b6",
+            "accent_dim": "#6a4a7a"
+          },
+          "json": "data/tini_tiny_series/room_307.json"
+        },
+        {
+          "slug": "rupee_mein_kya_milta_tha",
+          "name": "Rupee Mein Kya Milta Tha?",
+          "tagline": "In 1990, Rs 1 bought you a full meal. Today it won't buy a reply on Tinder.",
+          "concept": "Each episode picks a year and shows what Rs 1 could buy then vs now. Not just prices — WHY things changed. Economics told through the lens of a single rupee coin.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a140a",
+            "bg_mid": "#28200f",
+            "text": "#f0e8d0",
+            "accent": "#ffc107",
+            "accent_dim": "#8a7840"
+          },
+          "json": "data/tini_tiny_series/rupee_mein_kya_milta_tha.json"
+        },
+        {
+          "slug": "scam_101",
+          "name": "Scam 101",
+          "tagline": "This scam stole Rs 500 crore. It started with one WhatsApp message.",
+          "concept": "Each episode breaks down a real scam — how it worked, who fell for it, and how to spot it. Educational but told like a thriller. So simple a teenager could spot every scam.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0a0a",
+            "bg_mid": "#280f0f",
+            "text": "#f0d8d8",
+            "accent": "#ef5350",
+            "accent_dim": "#8a5050"
+          },
+          "json": "data/tini_tiny_series/scam_101.json"
+        },
+        {
+          "slug": "second_shift",
+          "name": "Second Shift",
+          "tagline": "Your day job pays the bills. Your second shift pays the soul.",
+          "concept": "People's secret lives after 6 PM. A banker does stand-up. A CA paints. An auto driver writes screenplays. Each episode follows one person's double life — the 'respectable' day job and the 'impractical' night passion — all set in a Pune co-working space run by a retired IAS officer named Rajan.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0f1a1a",
+            "bg_mid": "#182828",
+            "text": "#d8f0f0",
+            "accent": "#26c6da",
+            "accent_dim": "#4a8a8a"
+          },
+          "json": "data/tini_tiny_series/second_shift.json"
+        },
+        {
+          "slug": "the_algorithm",
+          "name": "The Algorithm",
+          "tagline": "In 2042, the city runs on logic. But logic has no mercy.",
+          "concept": "Year 2042. An AI called ARIA runs Neo-Bangalore -- India's first fully automated city. Every citizen is optimized -- jobs, relationships, health, emotions managed by the system. Each episode follows a different citizen discovering the dark cost of optimization. Someone is trying to shut ARIA down. Each episode reveals one more rule the AI enforces, getting progressively darker.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1a1a",
+            "bg_mid": "#0f2828",
+            "text": "#d8f0ee",
+            "accent": "#00bcd4",
+            "accent_dim": "#4a8a8a"
+          },
+          "json": "data/tini_tiny_series/the_algorithm.json"
+        },
+        {
+          "slug": "the_comment_section",
+          "name": "The Comment Section",
+          "tagline": "One comment. One story.",
+          "concept": "Each episode starts with a single Instagram comment — the kind you've seen a thousand times — and spirals into a full story. Meta, funny, self-aware, and incredibly shareable.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#140a1a",
+            "bg_mid": "#200f28",
+            "text": "#e8d0f0",
+            "accent": "#e040fb",
+            "accent_dim": "#7a4a8a"
+          },
+          "json": "data/tini_tiny_series/the_comment_section.json"
+        },
+        {
+          "slug": "the_delivery",
+          "name": "The Delivery",
+          "tagline": "Har dabbe mein koi insaan hai.",
+          "concept": "Each episode = one delivery passing through a sorting hub in a mid-sized Indian city. The story is about the sender, not the receiver. Why did they send it? What did it cost them? The mundane act of sending something becomes deeply human.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0f14",
+            "bg_mid": "#28182a",
+            "text": "#f0d8e8",
+            "accent": "#ce93d8",
+            "accent_dim": "#8a5a7a"
+          },
+          "json": "data/tini_tiny_series/the_delivery.json"
+        },
+        {
           "slug": "the_dropout",
           "name": "The Dropout",
           "tagline": "Before the empire, there was the struggle.",
+          "concept": "Famous people who dropped out, failed, were rejected — before making it big. Each episode focuses on one person's LOWEST moment and what they did next. The success is the payoff slide. The struggle is the story.",
           "handle": "@tini_tiny_series",
           "episode_count": 30,
           "requires_auth": false,
@@ -20,6 +344,159 @@
             "accent_dim": "#8a6840"
           },
           "json": "data/tini_tiny_series/the_dropout.json"
+        },
+        {
+          "slug": "the_flat",
+          "name": "The Flat",
+          "tagline": "Four flatmates. One secret. Every episode has a clue.",
+          "concept": "Four flatmates share a flat in Mumbai. They split rent, argue about dishes, deal with WiFi problems. Normal life. But one of them is secretly something — a spy, a time traveler, a ghost, or something stranger. Each episode is a slice-of-life flatmate situation with one tiny suspicious detail at the end. The audience pieces clues together across episodes.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a100a",
+            "bg_mid": "#28180f",
+            "text": "#f0e0d0",
+            "accent": "#ff7043",
+            "accent_dim": "#8a6050"
+          },
+          "json": "data/tini_tiny_series/the_flat.json"
+        },
+        {
+          "slug": "the_interviewer",
+          "name": "The Interviewer",
+          "tagline": "He asked her why she deserved the job. Her answer made him quit his.",
+          "concept": "A job interviewer — Vikram Mehra, 43, Head of HR — sees hundreds of candidates. Each episode is one interview, both sides. Every interview reveals more about the interviewer than the candidate. Mystery arc: Vikram has an unsigned resignation letter and a son he won't call back.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 11,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0f0f12",
+            "bg_mid": "#1a1a20",
+            "text": "#e0e0e4",
+            "accent": "#90a4ae",
+            "accent_dim": "#6a7078"
+          },
+          "json": "data/tini_tiny_series/the_interviewer.json"
+        },
+        {
+          "slug": "the_last_day",
+          "name": "The Last Day",
+          "tagline": "On this day, they were the biggest in the world. Tomorrow, they wouldn't exist.",
+          "concept": "The final 24 hours of famous companies, empires, regimes, and cultural eras. What went wrong, who saw it coming, who was in denial. Each episode is a countdown to collapse.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0a0a",
+            "bg_mid": "#280f10",
+            "text": "#f0d8d8",
+            "accent": "#b71c1c",
+            "accent_dim": "#8a4a4a"
+          },
+          "json": "data/tini_tiny_series/the_last_day.json"
+        },
+        {
+          "slug": "the_night_shift",
+          "name": "The Night Shift",
+          "tagline": "At 3 AM, the city belongs to people you'll never meet.",
+          "concept": "Stories of people who work at night — security guards, call center workers, truck drivers, ER nurses, bakers. What happens between midnight and 6 AM. Each episode is one person's night.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#060a14",
+            "bg_mid": "#0a1020",
+            "text": "#c8d0e0",
+            "accent": "#5c6bc0",
+            "accent_dim": "#4a5070"
+          },
+          "json": "data/tini_tiny_series/the_night_shift.json"
+        },
+        {
+          "slug": "the_teachers_diary",
+          "name": "The Teacher's Diary",
+          "tagline": "Ek teacher ki sabse badi safalta yeh nahi ki uske bacche successful hue. Yeh hai ki unhone usse phone karna band nahi kiya.",
+          "concept": "A retired school teacher — Sharma Sir — has died. His daughter finds his diary spanning 20+ years of notes on 10 students he tutored at his modest 2BHK in a tier-2 Indian city. The diary reveals his perspective — his pride, worry, bias, mistakes. Each episode is a diary entry about one student or event, narrated in Sharma Sir's voice. He was kind but imperfect — he had favorites, misjudged kids, and was wrong sometimes. The series IS the diary.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 16,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a150f",
+            "bg_mid": "#2a2018",
+            "text": "#f0e8d8",
+            "accent": "#c4a87a",
+            "accent_dim": "#8a7a5e"
+          },
+          "json": "data/tini_tiny_series/the_teachers_diary.json"
+        },
+        {
+          "slug": "three_thousand_bce",
+          "name": "3000 BCE",
+          "tagline": "Ancient power. Modern playbook. Same game.",
+          "concept": "Indian mythology told as modern thriller. Mahabharat as boardroom politics. Lanka as tech empire. Draupadi's court as a harassment tribunal. Krishna as a fixer. Each episode is one scene, one twist. The mythology is real -- the framing is modern. Every episode ends with a modern parallel. Not retelling mythology. Revealing it was always about power, betrayal, ambition, justice, and the people destroyed by all four.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a150a",
+            "bg_mid": "#28200f",
+            "text": "#f0e8d0",
+            "accent": "#d4a017",
+            "accent_dim": "#8a7a4a"
+          },
+          "json": "data/tini_tiny_series/three_thousand_bce.json"
+        },
+        {
+          "slug": "two_minutes_before",
+          "name": "2 Minutes Before",
+          "tagline": "Nobody in this room knows they have 2 minutes left.",
+          "concept": "The 2 minutes before a historic disaster or event. Reconstructed from survivor accounts, declassified reports, and investigative journalism. Each episode freezes time and walks through the final moments before everything changed.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a0f1a",
+            "bg_mid": "#101825",
+            "text": "#e0e8f0",
+            "accent": "#4a9eff",
+            "accent_dim": "#5a7a9a"
+          },
+          "json": "data/tini_tiny_series/two_minutes_before.json"
+        },
+        {
+          "slug": "vg_sir",
+          "name": "Happier Times",
+          "tagline": "Kuch log chale gaye. Kuch reh gaye. Kuch yaad reh gayi.",
+          "concept": "A retired school principal passes away. His wife finds his diary — written over 20+ years. The audience reads along with her. Sir's house was where kids gathered — not formal tuition, a hangout where studying happened. Through diary entries, we trace what happened to each of these boys as life scattered them across the world.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 30,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a140a",
+            "bg_mid": "#2d2010",
+            "text": "#f5e6c8",
+            "accent": "#c4a265",
+            "accent_dim": "#8b7355"
+          },
+          "json": "data/tini_tiny_series/vg_sir.json"
+        },
+        {
+          "slug": "what_if_india",
+          "name": "What If India...",
+          "tagline": "Everything you know about India... happened because of one decision.",
+          "concept": "Each episode asks one 'what if' question about Indian history. Alternate history backed by real analysis. Not controversial — thoughtful, grounded speculation about roads not taken. A thought experiment at 2 AM with a smart friend.",
+          "handle": "@tini_tiny_series",
+          "episode_count": 9,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0f0a",
+            "bg_mid": "#281810",
+            "text": "#f0e4d4",
+            "accent": "#ff6f00",
+            "accent_dim": "#8a6040"
+          },
+          "json": "data/tini_tiny_series/what_if_india.json"
         }
       ]
     },
@@ -29,9 +506,44 @@
       "default_handle": "@go.one.level.deeper",
       "series": [
         {
+          "slug": "mahanagarpalika_101",
+          "name": "Mahanagarpalika 101",
+          "tagline": "Tumhara paisa. Tumhara shaher. Tumhara sawaal.",
+          "concept": "A retired civics teacher in Ichalkaranji gets a 3x property tax bill after the city upgrades from Nagar Parishad to Municipal Corporation. He starts asking questions — filing RTIs, meeting his corporator, attending ward meetings — and discovers that most citizens don't know what they're paying for or what they can demand. Each episode covers one aspect of how a municipal corporation works, delivered through his journey.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#2c2418",
+            "bg_mid": "#3a3028",
+            "text": "#f0e8d8",
+            "accent": "#c0392b",
+            "accent_dim": "#8b7355"
+          },
+          "json": "data/one_level_deeper/mahanagarpalika_101.json"
+        },
+        {
+          "slug": "the_career_edge",
+          "name": "The Career Edge",
+          "tagline": "25 rules for building a career they can't ignore.",
+          "concept": "Arjun Mehta — final-year B.Tech CS at a mid-tier Pune college, from Uttarakhand. No standout internships, no competitive programming trophies, three abandoned GitHub repos. Placement season is here and he's frozen — convinced he needs to find his passion before he can commit to anything. Each episode is a scene from his life as he navigates the panic, comparison, false starts, and grind of placement season. The learning happens through what Arjun goes through, not what he's told. Based on 'So Good They Can't Ignore You' by Cal Newport, with concepts from 'The Defining Decade' by Meg Jay and 'Designing Your Life' by Burnett & Evans.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a0a14",
+            "bg_mid": "#121220",
+            "text": "#e8eef4",
+            "accent": "#00e676",
+            "accent_dim": "#4a8a5a"
+          },
+          "json": "data/one_level_deeper/the_career_edge.json"
+        },
+        {
           "slug": "the_grove_method",
           "name": "The Grove Method",
           "tagline": "What they don't teach you when they promote you.",
+          "concept": "Arjun Sharma — IIT Bombay → PhD → 8 years as a senior ML researcher — gets poached as Head of AI at a large enterprise. Brilliant technically but has never managed anyone. Confident it can't be that hard, and didn't really want the role. His skip-level VP drops a copy of High Output Management on his desk in week one. Each episode: Arjun faces a management crisis, fumbles through it, then finds the Grove principle that would have saved him.",
           "handle": "@go.one.level.deeper",
           "episode_count": 30,
           "requires_auth": true,
@@ -43,6 +555,23 @@
             "accent_dim": "#8a7a4a"
           },
           "json": "data/one_level_deeper/the_grove_method.json"
+        },
+        {
+          "slug": "the_hiring_table",
+          "name": "The Hiring Table",
+          "tagline": "What they don't teach you when they start hiring.",
+          "concept": "Vikram Rao — IIT Kharagpur → 8 years at Amazon → quit to co-found an AI/ML startup. Built the prototype solo in 4 months. Now he needs to build a team of 20 from scratch. Each episode: a candidate walks in, gets evaluated through multiple lenses — Vikram (CTO), Meera (seasoned HR), rotating technical interviewers — and a hiring decision is made. We see how those bets play out. The series draws frameworks from multiple hiring books and real-world wisdom.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 23,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#2c2c2c",
+            "bg_mid": "#3a3a3a",
+            "text": "#f0ebe3",
+            "accent": "#d4a853",
+            "accent_dim": "#8b7355"
+          },
+          "json": "data/one_level_deeper/the_hiring_table.json"
         }
       ]
     },
@@ -52,9 +581,78 @@
       "default_handle": "@the.unwritten.rules",
       "series": [
         {
+          "slug": "before_the_signboard",
+          "name": "Before The Signboard",
+          "tagline": "What happened before the business had a name people recognized.",
+          "concept": "An unnamed interviewer travels across India — cities, towns, villages — meeting people who built businesses from scratch. Each episode is one place, one founder, one story. The focus is on the hardships, the near-failures, the ugly early days. Not all businesses succeed. Core thesis: Choose the struggle you want to endure, not the outcome you want to get. Money is a byproduct.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1c1c1c",
+            "bg_mid": "#2a2520",
+            "text": "#e8dfd5",
+            "accent": "#c47a3a",
+            "accent_dim": "#6b5b4f"
+          },
+          "json": "data/the_unwritten_rules/before_the_signboard.json"
+        },
+        {
+          "slug": "beyond_the_marks",
+          "name": "Beyond the Marks",
+          "tagline": "You weren't taught wrong. You just weren't taught everything.",
+          "concept": "Sachin, a lower-middle-class man from a small town in Maharashtra, works his way to the US through sheer merit. His 5-year-old son has been in an American school for about a year, and Sachin is worried — no homework, no textbooks, no ranks. Through lunch conversations with colleagues from five countries, he discovers that education systems shape risk-taking, creativity, and career choices in ways he never imagined. Each episode is one discovery, one reframe.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a1f36",
+            "bg_mid": "#2d3249",
+            "text": "#f0ead6",
+            "accent": "#d4a843",
+            "accent_dim": "#7a8499"
+          },
+          "json": "data/the_unwritten_rules/beyond_the_marks.json"
+        },
+        {
+          "slug": "ego_down",
+          "name": "Ego Down",
+          "tagline": "Har rishte mein koi ek pehle jhukta hai.",
+          "concept": "Pure scenes from couples, siblings, and friends — across the full arc of life (teens to 40s-50s). No characters, no narrator, no moral until the last slide. Each episode shows a precisely observed moment from a relationship, then drops the unwritten rule as the final punchline. The rule is the screenshot slide — the thing women DM to their sister, husband, or best friend.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#f5efe6",
+            "bg_mid": "#f5efe6",
+            "text": "#2a2018",
+            "accent": "#c47a8a",
+            "accent_dim": "#a85a6a"
+          },
+          "json": "data/the_unwritten_rules/ego_down.json"
+        },
+        {
+          "slug": "lucky_hai_kya",
+          "name": "Lucky Hai Kya?",
+          "tagline": "Luck nahi, odds stack kiye hain inhone.",
+          "concept": "Everyone sees the moment someone 'makes it.' Nobody sees the 10 years before. This series flips the script — showing what it actually takes to maximize your odds of success. Three types of stories: real people whose single breakthrough changed everything after years of invisible grind. Kids and young adults grinding right now with no guarantee. Parents who rearranged their entire lives for their child's dream. Not motivational. Not pity. Just honest. The unwritten rule: luck is odds, and odds can be stacked.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a1a1e",
+            "bg_mid": "#2a2a30",
+            "text": "#e8e8ec",
+            "accent": "#c0c0c8",
+            "accent_dim": "#6a6a72"
+          },
+          "json": "data/the_unwritten_rules/lucky_hai_kya.json"
+        },
+        {
           "slug": "tamasha",
           "name": "Tamasha",
           "tagline": "भीड़ जुटाने का बहाना हमेशा मिल जाता है",
+          "concept": "A series about the people standing next to the stage — the volunteer, the auntie, the 200-rupee man, the teenage slogan-shouter, the shopkeeper with the banner outside because not putting it up is noticed. Every episode watches one of them from the balcony of the flat next door. The politician is never named. The party is never named. Religion is rotated and never blamed. The villain is the mechanism — governance substituted by spectacle — and the tragedy is that the mechanism works because nobody here is stupid; everybody here is tired.",
           "handle": "@the.unwritten.rules",
           "episode_count": 25,
           "requires_auth": true,
@@ -66,6 +664,57 @@
             "accent_dim": "#d4a855"
           },
           "json": "data/the_unwritten_rules/tamasha.json"
+        },
+        {
+          "slug": "the_new_manager",
+          "name": "The New Manager",
+          "tagline": "What they don't teach you when they promote you.",
+          "concept": "Arjun Sharma — IIT Bombay → PhD → 8 years as a senior ML researcher — gets poached as Head of AI at a large enterprise. Brilliant technically but has never managed anyone. Confident it can't be that hard, and didn't really want the role. His skip-level VP drops a copy of High Output Management on his desk in week one. Each episode: Arjun faces a management crisis, fumbles through it, then finds the Grove principle that would have saved him.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 30,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a1a1a",
+            "bg_mid": "#252525",
+            "text": "#e8eef4",
+            "accent": "#d4a056",
+            "accent_dim": "#8a7040"
+          },
+          "json": "data/the_unwritten_rules/the_new_manager.json"
+        },
+        {
+          "slug": "the_quiet_hours",
+          "name": "The Quiet Hours",
+          "tagline": "Some lessons only arrive when everything else goes quiet.",
+          "concept": "A patient care coordinator, new to Mumbai, joins a large multispeciality hospital. Through her work she meets patients across the spectrum — terminal cases, accident recoveries, heart scares, burnout collapses, surgery recoveries. Each patient is a window into an unwritten rule about life. Each episode is one patient, one lesson. Her own arc is the quiet accumulation of these encounters reshaping how she sees her own life.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a2a3a",
+            "bg_mid": "#2d3a3e",
+            "text": "#f0e8dc",
+            "accent": "#d4a574",
+            "accent_dim": "#7a8f9a"
+          },
+          "json": "data/the_unwritten_rules/the_quiet_hours.json"
+        },
+        {
+          "slug": "they_grow_up",
+          "name": "They Grow Up",
+          "tagline": "The hardest days are the ones you'll miss the most.",
+          "concept": "Each episode speaks to working parents (nuclear family, no grandparent support nearby) at a specific age milestone — from 1 week old to 14 years. Every episode validates the struggle first, then reframes it: this specific chaos is temporary, and future-you would give anything to live it one more day. Different family each episode. No recurring protagonist. The unwritten rule: your career will wait. Your kid won't.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 22,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1e1c1a",
+            "bg_mid": "#2a2725",
+            "text": "#ece5db",
+            "accent": "#c49a4a",
+            "accent_dim": "#7a6b55"
+          },
+          "json": "data/the_unwritten_rules/they_grow_up.json"
         }
       ]
     }

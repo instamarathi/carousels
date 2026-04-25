@@ -63,7 +63,8 @@ export const HomePage: React.FC<{
                       )}
                     </div>
                     <h3 className="card-title">{s.name}</h3>
-                    <p className="card-tagline">{s.tagline}</p>
+                    {s.tagline && <p className="card-tagline">{s.tagline}</p>}
+                    {s.concept && <p className="card-concept">{s.concept}</p>}
                     <div className="card-bottom">
                       <span className="card-episodes">
                         {s.episode_count} episode{s.episode_count === 1 ? "" : "s"}

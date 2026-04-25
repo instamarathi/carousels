@@ -135,6 +135,7 @@ def trim_series(data: dict, default_handle: str) -> dict:
         "series": {
             "name": series.get("name", ""),
             "tagline": series.get("tagline", ""),
+            "concept": series.get("concept", ""),
             "handle": handle,
         },
         "episodes": [trim_episode(e) for e in data.get("episodes", [])],
@@ -173,6 +174,7 @@ def build_series(channel: dict, series_dir: Path, only: set[str] | None) -> dict
         "slug": slug,
         "name": name,
         "tagline": trimmed["series"]["tagline"],
+        "concept": trimmed["series"]["concept"],
         "handle": trimmed["series"]["handle"],
         "episode_count": len(trimmed["episodes"]),
         "requires_auth": slug not in FREE_SERIES,

@@ -129,7 +129,7 @@ button { font: inherit; cursor: pointer; }
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
-  min-height: 220px;
+  min-height: 290px;
 }
 .series-card:hover {
   transform: translateY(-3px);
@@ -194,9 +194,20 @@ button { font: inherit; cursor: pointer; }
   font-size: 14px;
   color: #c8c8c8;
   font-style: italic;
-  line-height: 1.55;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+.card-concept {
+  font-size: 13px;
+  color: #999;
+  line-height: 1.6;
   margin-bottom: 18px;
   flex: 1;
+  /* Clamp to ~5 lines so cards stay close to equal height. */
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 .card-bottom {
   display: flex;
