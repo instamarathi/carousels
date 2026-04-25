@@ -4,3 +4,9 @@ dist
 *.log
 .claude
 tsconfig.tsbuildinfo
+
+# Local build pipeline (paths to private source repo, free-series list).
+# Data is committed pre-built; the workflow only runs `npm run build`.
+build.py
+*.py
+__pycache__/
