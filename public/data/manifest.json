@@ -175,6 +175,23 @@
           "json": "data/one_level_deeper/the_hiring_table.json"
         },
         {
+          "slug": "the_long_game",
+          "name": "The Long Game",
+          "tagline": "Why good trades lose money. Why bad trades win.",
+          "concept": "Ravi Joshi (38) — ex-derivatives dealer at a Mumbai broker, now an independent index-options trader running a 200-person retail cohort from a small Andheri office. Lost 40% of his capital in his first year solo before he properly internalized probability. Each episode: a moment in his trading day — a student texts a losing trade, his own setup goes wrong, the market does something stupid, his wife asks a dumb-smart question — becomes the door into one probabilistic-thinking concept that retail traders need but never get taught.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0d1117",
+            "bg_mid": "#161b22",
+            "text": "#e6edf3",
+            "accent": "#fb923c",
+            "accent_dim": "#8a6040"
+          },
+          "json": "data/one_level_deeper/the_long_game.json"
+        },
+        {
           "slug": "before_the_signboard",
           "name": "Before The Signboard",
           "tagline": "What happened before the business had a name people recognized.",
@@ -633,6 +650,40 @@
             "accent_dim": "#8b7355"
           },
           "json": "data/tini_tiny_series/vg_sir.json"
+        },
+        {
+          "slug": "the_couples_therapist",
+          "name": "The Couples Therapist",
+          "tagline": "Every fight is about something else.",
+          "concept": "Dr. Kabir Mehta — 47, couples therapist in Bandra, Mumbai. Each episode: one couple, one fight, one Daniel Goleman EQ concept underneath. He thinks it's about money — it's about empathy. She thinks he doesn't care — he doesn't know how to show it. The therapist names the emotion they can't.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a1410",
+            "bg_mid": "#28201a",
+            "text": "#f0e4d0",
+            "accent": "#d4715c",
+            "accent_dim": "#8a5a4a"
+          },
+          "json": "data/one_level_deeper/the_couples_therapist.json"
+        },
+        {
+          "slug": "the_wedding_planner",
+          "name": "The Wedding Planner",
+          "tagline": "She's planned 200 weddings. She knows which ones will last.",
+          "concept": "Naina Khurana — 38, runs a boutique wedding planning firm in Delhi. Each episode: one couple obsessing over the wrong detail, one Daniel Gilbert concept about why we are spectacularly bad at predicting what will make us happy. The expensive venue, not the guest list. The perfect dress, not the right partner. The flash-mob choreography, not the mother-in-law.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#1a0f1a",
+            "bg_mid": "#2a1828",
+            "text": "#f5e8d0",
+            "accent": "#e8a838",
+            "accent_dim": "#8a6a3a"
+          },
+          "json": "data/one_level_deeper/the_wedding_planner.json"
         },
         {
           "slug": "beyond_the_marks",
