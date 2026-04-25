@@ -1,12 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { navigateTo } from "./useHashRoute";
 import { LockIcon } from "./icons";
 import type { Manifest } from "./types";
+
+const VISIBLE_PER_CHANNEL = 5;
 
 export const HomePage: React.FC<{
   manifest: Manifest | null;
   signedIn: boolean;
 }> = ({ manifest, signedIn }) => {
+  const [expanded, setExpanded] = useState<Set<string>>(new Set());
+
   if (!manifest) return <div className="empty-state">Loading manifest…</div>;
 
   const totalSeries = manifest.channels.reduce((acc, c) => acc + c.series.length, 0);
@@ -30,11 +34,22 @@ export const HomePage: React.FC<{
         </div>
       </section>
 
-      {manifest.channels.map((channel) => (
+      {manifest.channels.map((channel) => {
+        const isExpanded = expanded.has(channel.slug);
+        const showAll = isExpanded || channel.series.length <= VISIBLE_PER_CHANNEL;
+        const visible = showAll
+          ? channel.series
+          : channel.series.slice(0, VISIBLE_PER_CHANNEL);
+        const remaining = channel.series.length - VISIBLE_PER_CHANNEL;
+
+        return (
         <section key={channel.slug} className="home-channel">
-          <h2 className="home-channel-title">{channel.name}</h2>
+          <h2 className="home-channel-title">
+            {channel.name}
+            <span className="home-channel-count">{channel.series.length}</span>
+          </h2>
           <div className="home-grid">
-            {channel.series.map((s) => {
+            {visible.map((s) => {
               const locked = s.requires_auth && !signedIn;
               return (
                 <button
@@ -75,9 +90,39 @@ export const HomePage: React.FC<{
                 </button>
               );
             })}
+            {!showAll && (
+              <button
+                className="more-card"
+                onClick={() =>
+                  setExpanded((prev) => new Set(prev).add(channel.slug))
+                }
+                aria-label={`Show ${remaining} more series in ${channel.name}`}
+              >
+                <span className="more-count">+{remaining}</span>
+                <span className="more-label">more series</span>
+                <span className="more-arrow">↓</span>
+              </button>
+            )}
+            {isExpanded && channel.series.length > VISIBLE_PER_CHANNEL && (
+              <button
+                className="more-card collapse"
+                onClick={() =>
+                  setExpanded((prev) => {
+                    const next = new Set(prev);
+                    next.delete(channel.slug);
+                    return next;
+                  })
+                }
+                aria-label={`Collapse ${channel.name}`}
+              >
+                <span className="more-label">Show fewer</span>
+                <span className="more-arrow">↑</span>
+              </button>
+            )}
           </div>
         </section>
-      ))}
+      );
+      })}
     </div>
   );
 };
