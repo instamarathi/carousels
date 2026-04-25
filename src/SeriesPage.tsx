@@ -4,7 +4,7 @@ import { Carousel } from "./Carousel";
 import { Slide } from "./Slide";
 import { LockIcon, GoogleIcon } from "./icons";
 import { navigateTo } from "./useHashRoute";
-import type { Channel, Manifest, SeriesData, SeriesEntry } from "./types";
+import type { Category, Manifest, SeriesData, SeriesEntry } from "./types";
 import type { ProgressMap } from "./useProgress";
 
 function dataUrl(path: string): string {
@@ -23,9 +23,9 @@ export const SeriesPage: React.FC<{
 }> = ({ slug, manifest, user, authLoading, signIn, progress, progressLoaded, recordProgress }) => {
   const found = useMemo(() => {
     if (!manifest) return null;
-    for (const channel of manifest.channels) {
-      const series = channel.series.find((s) => s.slug === slug);
-      if (series) return { channel, series };
+    for (const category of manifest.categories) {
+      const series = category.series.find((s) => s.slug === slug);
+      if (series) return { category, series };
     }
     return null;
   }, [manifest, slug]);
@@ -75,7 +75,7 @@ export const SeriesPage: React.FC<{
   }
 
   if (found.series.requires_auth && !user && !authLoading) {
-    return <SignInGate channel={found.channel} series={found.series} signIn={signIn} />;
+    return <SignInGate category={found.category} series={found.series} signIn={signIn} />;
   }
 
   if (!seriesData || activeEpisode === null) {
@@ -84,7 +84,7 @@ export const SeriesPage: React.FC<{
 
   return (
     <SeriesContent
-      channel={found.channel}
+      category={found.category}
       series={found.series}
       data={seriesData}
       activeEpisode={activeEpisode}
@@ -99,14 +99,14 @@ export const SeriesPage: React.FC<{
 };
 
 const SeriesContent: React.FC<{
-  channel: Channel;
+  category: Category;
   series: SeriesEntry;
   data: SeriesData;
   activeEpisode: number;
   initialSlide: number;
   onSelectEpisode: (n: number) => void;
   onSlideRead: (episode: number, slide: number) => void;
-}> = ({ channel, series, data, activeEpisode, initialSlide, onSelectEpisode, onSlideRead }) => {
+}> = ({ category, series, data, activeEpisode, initialSlide, onSelectEpisode, onSlideRead }) => {
   const episode = useMemo(
     () => data.episodes.find((e) => e.episode_number === activeEpisode) ?? data.episodes[0],
     [data, activeEpisode],
@@ -128,7 +128,7 @@ const SeriesContent: React.FC<{
           ← All series
         </button>
         <div className="channel-tag" style={{ color: series.colors.accent }}>
-          {channel.name}
+          {category.name}
         </div>
         <h2 className="series-title">{series.name}</h2>
         <div className="series-tagline">{series.tagline}</div>
@@ -223,10 +223,10 @@ const SeriesContent: React.FC<{
 };
 
 const SignInGate: React.FC<{
-  channel: Channel;
+  category: Category;
   series: SeriesEntry;
   signIn: () => void;
-}> = ({ channel, series, signIn }) => {
+}> = ({ category, series, signIn }) => {
   return (
     <div className="signin-gate">
       <button className="back-link top" onClick={() => navigateTo({ kind: "home" })}>
@@ -240,7 +240,7 @@ const SignInGate: React.FC<{
         }}
       >
         <div className="gate-channel" style={{ color: series.colors.accent }}>
-          {channel.name}
+          {category.name}
         </div>
         <h2 className="gate-title">{series.name}</h2>
         <div className="gate-tagline">{series.tagline}</div>

@@ -3,7 +3,7 @@ import { navigateTo } from "./useHashRoute";
 import { LockIcon } from "./icons";
 import type { Manifest } from "./types";
 
-const VISIBLE_PER_CHANNEL = 5;
+const VISIBLE_PER_CATEGORY = 5;
 
 export const HomePage: React.FC<{
   manifest: Manifest | null;
@@ -13,8 +13,8 @@ export const HomePage: React.FC<{
 
   if (!manifest) return <div className="empty-state">Loading manifest…</div>;
 
-  const totalSeries = manifest.channels.reduce((acc, c) => acc + c.series.length, 0);
-  const totalEpisodes = manifest.channels.reduce(
+  const totalSeries = manifest.categories.reduce((acc, c) => acc + c.series.length, 0);
+  const totalEpisodes = manifest.categories.reduce(
     (acc, c) => acc + c.series.reduce((s, x) => s + x.episode_count, 0),
     0,
   );
@@ -34,19 +34,19 @@ export const HomePage: React.FC<{
         </div>
       </section>
 
-      {manifest.channels.map((channel) => {
-        const isExpanded = expanded.has(channel.slug);
-        const showAll = isExpanded || channel.series.length <= VISIBLE_PER_CHANNEL;
+      {manifest.categories.map((category) => {
+        const isExpanded = expanded.has(category.slug);
+        const showAll = isExpanded || category.series.length <= VISIBLE_PER_CATEGORY;
         const visible = showAll
-          ? channel.series
-          : channel.series.slice(0, VISIBLE_PER_CHANNEL);
-        const remaining = channel.series.length - VISIBLE_PER_CHANNEL;
+          ? category.series
+          : category.series.slice(0, VISIBLE_PER_CATEGORY);
+        const remaining = category.series.length - VISIBLE_PER_CATEGORY;
 
         return (
-        <section key={channel.slug} className="home-channel">
+        <section key={category.slug} className="home-channel">
           <h2 className="home-channel-title">
-            {channel.name}
-            <span className="home-channel-count">{channel.series.length}</span>
+            {category.name}
+            <span className="home-channel-count">{category.series.length}</span>
           </h2>
           <div className="home-grid">
             {visible.map((s) => {
@@ -65,7 +65,7 @@ export const HomePage: React.FC<{
                   <div className="card-content">
                     <div className="card-top">
                       <span className="card-channel" style={{ color: s.colors.accent }}>
-                        {channel.name}
+                        {category.name}
                       </span>
                       {locked ? (
                         <span className="card-lock">
@@ -94,26 +94,26 @@ export const HomePage: React.FC<{
               <button
                 className="more-card"
                 onClick={() =>
-                  setExpanded((prev) => new Set(prev).add(channel.slug))
+                  setExpanded((prev) => new Set(prev).add(category.slug))
                 }
-                aria-label={`Show ${remaining} more series in ${channel.name}`}
+                aria-label={`Show ${remaining} more series in ${category.name}`}
               >
                 <span className="more-count">+{remaining}</span>
                 <span className="more-label">more series</span>
                 <span className="more-arrow">↓</span>
               </button>
             )}
-            {isExpanded && channel.series.length > VISIBLE_PER_CHANNEL && (
+            {isExpanded && category.series.length > VISIBLE_PER_CATEGORY && (
               <button
                 className="more-card collapse"
                 onClick={() =>
                   setExpanded((prev) => {
                     const next = new Set(prev);
-                    next.delete(channel.slug);
+                    next.delete(category.slug);
                     return next;
                   })
                 }
-                aria-label={`Collapse ${channel.name}`}
+                aria-label={`Collapse ${category.name}`}
               >
                 <span className="more-label">Show fewer</span>
                 <span className="more-arrow">↑</span>

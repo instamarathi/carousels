@@ -18,15 +18,14 @@ export type SeriesEntry = {
   json: string; // path relative to site root
 };
 
-export type Channel = {
+export type Category = {
   name: string;
   slug: string;
-  default_handle: string;
   series: SeriesEntry[];
 };
 
 export type Manifest = {
-  channels: Channel[];
+  categories: Category[];
 };
 
 export type Slide = {
