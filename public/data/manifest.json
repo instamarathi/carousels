@@ -124,6 +124,23 @@
           "json": "data/one_level_deeper/mahanagarpalika_101.json"
         },
         {
+          "slug": "story_stock",
+          "name": "Story Stock",
+          "tagline": "The promise was a multibagger. The autopsy says otherwise.",
+          "concept": "25-episode autopsy of Indian companies that were once 'the next big thing.' Mostly failures, occasional survivors. Pattern recognition over prediction. Each episode walks through one company a retail investor could plausibly have bought into, surfaces the visible warning signs that existed before the crash, and abstracts a transferable lesson. Five wins are scattered through the season to show what real compounding looks like when nobody is hyping it.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 25,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a1018",
+            "bg_mid": "#121a26",
+            "text": "#e6ecf2",
+            "accent": "#5fb27a",
+            "accent_dim": "#6a7a8a"
+          },
+          "json": "data/one_level_deeper/story_stock.json"
+        },
+        {
           "slug": "the_career_edge",
           "name": "The Career Edge",
           "tagline": "25 rules for building a career they can't ignore.",
@@ -190,6 +207,40 @@
             "accent_dim": "#8a6040"
           },
           "json": "data/one_level_deeper/the_long_game.json"
+        },
+        {
+          "slug": "the_professors_bet",
+          "name": "The Professor's Bet",
+          "tagline": "Twelve students. Twelve pitches. One quiet rebel.",
+          "concept": "Last semester at IIM Bangalore. Prof. Anand Iyer (58, ex-VC, fund blew up in 2019) teaches Strategy. On Day 1 he writes 'Competition is for losers' on the board and bets ₹50 lakh of his own money that none of his 12 students will build a monopoly. Each Tuesday a student pitches; he uses one Thiel framework from Zero to One to dismantle it. In the back row, Meera Nair from Kollam doesn't speak — she is quietly building Bahi, a voice-first AI for India's small traders. In Episode 11 she finally pitches. Every framework checks out. In Episode 12 the professor writes a cheque.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 12,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0f1820",
+            "bg_mid": "#1a2530",
+            "text": "#e8e2d0",
+            "accent": "#d4a843",
+            "accent_dim": "#7a8090"
+          },
+          "json": "data/one_level_deeper/the_professors_bet.json"
+        },
+        {
+          "slug": "the_quiet_edge",
+          "name": "The Quiet Edge",
+          "tagline": "The introvert isn't behind. She's just thinking longer.",
+          "concept": "Maya Iyer — 28, Senior PM at NeoFin (a Bangalore fintech unicorn). IIM-A topper, technically the sharpest PM in the org. And the third quiet PM in three years to lose a promotion to Rohan Mehta — same age, same level, charming, present in every room. Maya is starting to believe she's the problem. Then Diya Krishnan, VP of Product, who was Maya twenty years ago, hands her a copy of Susan Cain's 'Quiet' and says one thing: 'You don't have a problem. You have an advantage you've never been taught to use.' Each episode: one Cain concept — the Extrovert Ideal, high-reactivity, the power of solitude, free trait theory, the rubber band, restorative niches, soft power, quiet leadership — applied to a real PM situation. Across 10 episodes, Maya stops trying to become Rohan and starts winning as herself.",
+          "handle": "@go.one.level.deeper",
+          "episode_count": 10,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0a141a",
+            "bg_mid": "#101e26",
+            "text": "#dde8ec",
+            "accent": "#7fbfb8",
+            "accent_dim": "#5a7a82"
+          },
+          "json": "data/one_level_deeper/the_quiet_edge.json"
         },
         {
           "slug": "before_the_signboard",
@@ -491,6 +542,23 @@
             "accent_dim": "#8a6050"
           },
           "json": "data/tini_tiny_series/the_flat.json"
+        },
+        {
+          "slug": "square_off",
+          "name": "Square Off",
+          "tagline": "The day Rohan got squared off.",
+          "concept": "A small-town F&O tipster from Indore (Rohan Vaishnav, 27) gets recruited to a slick BKC prop trading desk. He thinks he's been hired for his trading edge. He's been hired as a megaphone. The firm is a modern front for a Surat bull operator running illiquid mid-cap pump schemes — and Rohan's Telegram channel (30k subscribers) is the retail-side cover. By the time he understands what he's part of, he's already part of it. A 12-episode mystery framed by an April 2024 SEBI investigation closing in on the desk. Closed ending: Rohan turns cooperator, Vikram and Setji go down, Rohan settles, returns to Indore, lives smaller.",
+          "handle": "@the.unwritten.rules",
+          "episode_count": 12,
+          "requires_auth": true,
+          "colors": {
+            "bg_dark": "#0d0a0a",
+            "bg_mid": "#1a1010",
+            "text": "#f0e0d0",
+            "accent": "#ff3b30",
+            "accent_dim": "#8a4a45"
+          },
+          "json": "data/the_unwritten_rules/square_off.json"
         }
       ]
     },
